@@ -1,4 +1,4 @@
-class Author {
+export class Author {
   static description: string = 'This class represents an author';
 
   constructor(private _name: string) {}
@@ -8,11 +8,11 @@ class Author {
   }
 }
 
-class Video {
+export class Video {
   private _producer: string = '';
   static medium: string = 'Audio/Visual';
 
-  constructor(private title: string, private year: number) {}
+  constructor(private title: string, protected year: number) {}
 
   get producer(): string {
     return this._producer.toUpperCase();
@@ -34,6 +34,6 @@ class Video {
 console.log(`Author name is: ${newAuthor.name}`);
 console.log(`Description: ${Author.description}`); */
 
-const newVideo: Video = new Video('TypeScript for beginners', 2023);
+/* const newVideo: Video = new Video('TypeScript for beginners', 2023);
 newVideo.producer = 'Luis Fuentes';
-newVideo.print();
+newVideo.print(); */
