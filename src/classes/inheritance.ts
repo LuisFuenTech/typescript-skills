@@ -1,4 +1,4 @@
-import { Video } from './basics';
+import { Video } from './basic';
 
 class Documentary extends Video {
   constructor(title: string, year: number, public subject: string) {
