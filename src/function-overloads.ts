@@ -22,6 +22,9 @@ function getUserDetails(input: UserInput): UserOutput {
   }
 }
 
-console.log(getUserDetails(5));
 console.log(getUserDetails('Nels_Zieme'));
-console.log(getUserDetails('rocket'));
+console.log(getUserDetails('rocket')); // undefined
+
+const user1 = getUserDetails(5);
+console.log(user1);
+user1?.logComment(`This is a comment from user ${user1.username}`);
