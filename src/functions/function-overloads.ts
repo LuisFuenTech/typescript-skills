@@ -1,6 +1,6 @@
-import { UserInput, UserOutput } from './types';
+import { UserInput, UserOutput } from '../../types';
 
-import { users } from './utils/dataSource';
+import { users } from '../../utils/dataSource';
 
 function getUserById(id: number): UserOutput {
   return users.find((user) => user.id === id);
