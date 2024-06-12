@@ -1,24 +1,6 @@
-enum Gender {
-  Male = 'male',
-  Female = 'female'
-}
+import { UserInput, UserOutput } from './types';
 
-type User = {
-  id: number;
-  username: string;
-  age: number;
-  gender: Gender;
-};
-
-type UserOutput = User | undefined;
-
-const users: User[] = [
-  { id: 1, username: 'Herminia.Denesik', age: 80, gender: Gender.Female },
-  { id: 2, username: 'Nels_Zieme', age: 90, gender: Gender.Female },
-  { id: 3, username: 'Jacinto75', age: 26, gender: Gender.Female },
-  { id: 4, username: 'Foster_Erdman97', age: 81, gender: Gender.Male },
-  { id: 5, username: 'Antonina97', age: 84, gender: Gender.Female }
-];
+import { users } from './utils/dataSource';
 
 function getUserById(id: number): UserOutput {
   return users.find((user) => user.id === id);
@@ -32,7 +14,7 @@ function getUserByUsername(username: string): UserOutput {
 function getUserDetails(id: number): UserOutput;
 function getUserDetails(username: string): UserOutput;
 // Single implementation
-function getUserDetails(input: number | string): UserOutput {
+function getUserDetails(input: UserInput): UserOutput {
   if (typeof input === 'number') {
     return getUserById(input);
   } else {
