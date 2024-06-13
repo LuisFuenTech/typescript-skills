@@ -8,7 +8,7 @@ export class Author {
   }
 }
 
-export class Video {
+export abstract class Video {
   private _producer: string = '';
   static medium: string = 'Audio/Visual';
 
@@ -28,6 +28,8 @@ export class Video {
     console.log(`Producer: ${this.producer}`);
     console.log(`Medium: ${Video.medium}`);
   }
+
+  abstract printCredits(): void;
 }
 
 /* const newAuthor = new Author('John Doe');

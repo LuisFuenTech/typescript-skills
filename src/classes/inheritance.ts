@@ -10,6 +10,10 @@ class Documentary extends Video {
     super.print(); // method from parent class
     console.log(`Subject: ${this.subject} (${this.year})`);
   }
+
+  printCredits(): void {
+    console.log(`Producer: ${this.producer}`);
+  }
 }
 
 let documentary = new Documentary(
@@ -18,4 +22,4 @@ let documentary = new Documentary(
   'film history'
 );
 documentary.producer = 'History Channel';
-documentary.print();
+documentary.printCredits();
