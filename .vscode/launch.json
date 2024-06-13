@@ -9,7 +9,7 @@
       "request": "launch",
       "name": "Launch Program",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/dist/app.js",
+      "program": "${workspaceFolder}/typescript-fundamentals/dist/app.js",
       "outFiles": ["${workspaceFolder}/**/*.js"],
       "preLaunchTask": "compiling_typeScript",
       "internalConsoleOptions": "openOnSessionStart"
