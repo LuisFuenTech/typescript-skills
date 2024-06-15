@@ -7,7 +7,7 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Launch Program",
+      "name": "Launch Fundamentals",
       "skipFiles": ["<node_internals>/**"],
       "program": "${workspaceFolder}/typescript-fundamentals/dist/app.js",
       "outFiles": ["${workspaceFolder}/**/*.js"],

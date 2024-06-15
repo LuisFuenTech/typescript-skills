@@ -11,10 +11,10 @@ function getUserByUsername(username: string): UserOutput {
 }
 
 // Multiple signatures
-function getUserDetails(id: number): UserOutput;
-function getUserDetails(username: string): UserOutput;
+export function getUserDetails(id: number): UserOutput;
+export function getUserDetails(username: string): UserOutput;
 // Single implementation
-function getUserDetails(input: UserInput): UserOutput {
+export function getUserDetails(input: UserInput): UserOutput {
   if (typeof input === 'number') {
     return getUserById(input);
   } else {
@@ -22,9 +22,9 @@ function getUserDetails(input: UserInput): UserOutput {
   }
 }
 
-console.log(getUserDetails('Nels_Zieme'));
+/* console.log(getUserDetails('Nels_Zieme'));
 console.log(getUserDetails('rocket')); // undefined
 
 const user1 = getUserDetails(5);
 console.log(user1);
-user1?.logComment(`This is a comment from user ${user1.username}`);
+user1?.logComment(`This is a comment from user ${user1.username}`); */
